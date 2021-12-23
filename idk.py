@@ -1,5 +1,7 @@
 import random
-no = 0
+import math
+one = 0
+two = 0
 points = 250
 aPoints = 1
 while aPoints > 0:
@@ -42,8 +44,8 @@ while aPoints > 0:
     aPoints = points
     print("you havent spent all of your points!")
 print("\n\ngreat! now it is time to go on an adventure")
-while no == 0:
-    no = 1
+while one == 0:
+    one = 1
     print("one day you are playing the hit battle royal game called jimmy johns. while playing the game, you get double teamed, what do you do to live?")
     a = input("1.)crank some phat 90s\n2.)run away and hide\n3.)try to kill both of them\n")
     if int(a) == 1:
@@ -63,4 +65,26 @@ while no == 0:
             print("as you attempt to peak the two hekkers, you can pick one off with a rifle. the last person cracks your sheild, but you snipe em last second, winning the game.")
         elif int(jimmyJohns) + (int(cheeseMaking) - 60) < random.randrange(0, 51):
             print("the very milisecond, the very frame, as you peak, both of them snipe you. as you lose the game, out of rage you throw your controller at your mom, getting you grounded. you cannot complete the adventure anymore")
+
+while two == 0:
+    two = 1
+    print("after clapping everyone in jimmy johns, a giant troll tries to eat you, what do you do")
+    b = input("1.)try and use strength to fight it\n2.)use your fire skill and burn it\n3.)offer the troll some cheese that you made earlier\n")
+    if int(b) == 1:
+        if int(strength) * math.sqrt((int(shadowFight2Ability) - 10) ** 2) + 1 > random.randrange(0, 21):
+            print("you slay the troll, and are able to continue with your quest")
+        elif int(strength) * math.sqrt((int(shadowFight2Ability) - 10) ** 2) + 1 < random.randrange(0, 21):
+            print("the troll goes nom nom on you, and you die")
+    
+    if int(b) == 2:
+        if int(fire) * math.sqrt((int(shadowFight2Ability) - 10) ** 2) + 1 > random.randrange(0, 21):
+            print("you kill the troll in a fiery blaze, letting you continue your adventure")
+        elif int(fire) * math.sqrt((int(shadowFight2Ability) - 10) ** 2) + 1 < random.randrange(0, 21):
+            print("your fire is not enough to kill the troll, and you are chomped on. nom nom nom. you are died.")
+    
+    if int(b) == 3:
+        if int(cheeseMaking) > 95:
+            print("the troll said 'mmmmmm, tasty cheese, byee' you did it, you may continue with your quest")
+        elif int(cheeseMaking) < 95:
+            print("YOUR CHEESE LEVEL IS NOT ENOUGH YOU SHALL PERISHHHHHH")
 
